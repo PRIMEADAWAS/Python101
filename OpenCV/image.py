@@ -12,7 +12,7 @@ print(img)
 imgresize = cv2.resize(img, (900, 600))
 
 # img write
-cv2.imwrite('imwrite.jpg', imgresize)
+cv2.imwrite('OpenCV/imwrite.jpg', imgresize)
 
 # show img
 cv2.imshow('TITLE', imgresize)
