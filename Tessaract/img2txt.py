@@ -13,6 +13,7 @@ conf = r'--oem 3 --psm 6 outputbase digits'
 txtAll = tess.image_to_string(img)
 # print(txtAll)
 
+
 # text with position x,y,w,h
 # texts = tess.image_to_boxes(img, config=conf)
 # # print(texts)
