@@ -1,12 +1,13 @@
 import cv2
 
 cascPath = "OpenCV/haarcascade_frontalface_default.xml"
+faceCascade = cv2.CascadeClassifier(cascPath)
+
 webcam = cv2.VideoCapture(0)
 
 while (True):
     result, image = webcam.read()
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    faceCascade = cv2.CascadeClassifier(cascPath)
     faces = faceCascade.detectMultiScale(gray)
     for face in faces:
         x, y, w, h = face
