@@ -16,8 +16,9 @@ while True:
     if (results.multi_hand_landmarks):
         for landmark in results.multi_hand_landmarks:
             mp_draw.draw_landmarks(image, landmark, mp_hands.HAND_CONNECTIONS)
+
     image = cv2.resize(image, (1280, 720))
-    cv2.imshow("HandTracking", image)
+    cv2.imshow("HandTracking", cv2.flip(image, 1))
     if cv2.waitKey(1) & 0xFF == ord('e'):
         break
 
