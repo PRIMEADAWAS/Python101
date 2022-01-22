@@ -43,6 +43,6 @@ for x, text in enumerate(texts.splitlines()):
                         cv2.FONT_HERSHEY_COMPLEX, 0.45, (0, 255, 0), 1)
 
 
-# imgresize = cv2.resize(img, (900, 600))
-cv2.imshow("tesserect", img)
+imgresize = cv2.resize(img, (1280, 720))
+cv2.imshow("tesserect", imgresize)
 cv2.waitKey(0)
