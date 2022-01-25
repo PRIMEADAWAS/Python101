@@ -28,21 +28,21 @@ while True:
                 h, w, c = image.shape
                 cx, cy = int(lm.x*w), int(lm.y*h)
                 if(id == 4 or id == 8):
-                    cv2.circle(image, (cx, cy), 8, (0, 255, 0), cv2.FILLED)
+                    cv2.circle(image, (cx, cy), 8, (236, 208, 154), cv2.FILLED)
                     cv2.putText(image, str(id), (cx, cy),
-                                cv2.FONT_HERSHEY_COMPLEX_SMALL, 2, (0, 255, 0), 2)
+                                cv2.FONT_HERSHEY_COMPLEX_SMALL, 2, (161, 114, 21), 2)
                 handPosList.append([id, cx, cy, lm])
             # print(handPosList[8][3].x)
-            x1, y1 = handPosList[4][1], handPosList[4][2]
-            x2, y2 = handPosList[8][1], handPosList[8][2]
+            x1, y1 = handPosList[8][1], handPosList[8][2]
+            x2, y2 = handPosList[12][1], handPosList[12][2]
             cx, cy = (x1+x2)//2, (y1+y2)//2
             # cv2.circle(image, (cx, cy), 8, (0, 255, 0), cv2.FILLED)
             lenght = math.hypot(x2-x1, y2-y1)
             # print(lenght)
             cv2.line(image, (x1, y1),
-                     (x2, y2), (0, 255, 0), 2)
+                     (x2, y2), (126, 142, 62), 2)
             cv2.putText(image, str(lenght), (cx, cy),
-                        cv2.FONT_HERSHEY_COMPLEX_SMALL, 2, (0, 255, 0), 2)
+                        cv2.FONT_HERSHEY_COMPLEX_SMALL, 2, (81, 187, 250), 2)
             mp_draw.draw_landmarks(image, landmark, mp_hands.HAND_CONNECTIONS)
 
     cTime = time.time()

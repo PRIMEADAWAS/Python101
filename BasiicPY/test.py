@@ -11,3 +11,6 @@ for count, value in enumerate(values):
 print('Try count start=2')
 for count, value in enumerate(values, start=2):
     print(count, value)
+
+for i in range(4):
+    print(i)
