@@ -40,7 +40,7 @@ for x, text in enumerate(texts.splitlines()):
             # print(text[0], x, y, w, h)
             cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 1)
             cv2.putText(img, text[11], (x, y),
-                        cv2.FONT_HERSHEY_COMPLEX, 0.45, (0, 255, 0), 1)
+                        cv2.FONT_HERSHEY_COMPLEX, 0.75, (0, 255, 0), 1)
 
 
 imgresize = cv2.resize(img, (1280, 720))
