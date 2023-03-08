@@ -3,15 +3,16 @@ import pytesseract as tess
 tess.pytesseract.tesseract_cmd = r'C:\Users\ADAWAS\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
 
-img = cv2.imread('wow.jpg')
+# img = cv2.imread('wow.jpg')
+img = cv2.imread('woww.png')
 # img = cv2.cvtColor(img, cv2.COLORE_BGR2RGB)
 # print(img.shape)
 hImg, wimg, c = img.shape
 conf = r'--oem 3 --psm 6 outputbase digits'
 
 # all text
-txtAll = tess.image_to_string(img)
-# print(txtAll)
+txtAll = tess.image_to_string(img, lang='kor+eng')
+print(txtAll)
 
 
 # text with position x,y,w,h
@@ -27,7 +28,7 @@ txtAll = tess.image_to_string(img)
 
 
 # group word x,y,w,h
-texts = tess.image_to_data(img)
+texts = tess.image_to_data(img, lang='kor+eng')
 # print(texts)
 for x, text in enumerate(texts.splitlines()):
     if x:
